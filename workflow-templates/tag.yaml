@@ -1,0 +1,17 @@
+---
+name: Tag
+on:
+  push:
+    tags: ['*']
+jobs:
+  add-tag:
+    name: Add Tag
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add tag to Docker image in GCP Artifact Registry
+        uses: latrock/add-tag-to-docker-image-in-gcp-artifact-registry@v0.1.2
+        with:
+          gcp-sa-creds-json: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+          registry: europe-west3-docker.pkg.dev
+          repository: fixme
+          image-name: fixme

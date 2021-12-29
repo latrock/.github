@@ -1,0 +1,15 @@
+{
+    "name": "Latrock Main CI Workflow",
+    "description": "Latrock Main CI starter workflow.",
+    "iconName": "main-icon.svg",
+    "categories": [
+        "Go",
+        "JavaScript",
+        "Rust",
+        "Python"
+    ],
+    "filePatterns": [
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
